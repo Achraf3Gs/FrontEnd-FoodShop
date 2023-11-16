@@ -27,7 +27,9 @@ import { LoadingComponent } from './components/partials/loading/loading.componen
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 import { MapComponent } from './components/partials/map/map.component';
-import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component'
+import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
+import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component'
 
 
 @NgModule({
@@ -52,7 +54,9 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
     CheckoutPageComponent,
     OrderItemsListComponent,
     MapComponent,
-    PaymentPageComponent
+    PaymentPageComponent,
+    PaypalButtonComponent,
+    OrderTrackPageComponent
   ],
   imports: [
     BrowserModule,

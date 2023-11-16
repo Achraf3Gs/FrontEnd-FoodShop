@@ -8,6 +8,7 @@ import { loginUserGuard } from './login-user.guard';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent,canActivate:[loginUserGuard]},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'login', component: LoginPageComponent},
   {path:'register', component: RegisterPageComponent},
   {path:'checkout', component: CheckoutPageComponent, canActivate:[loginUserGuard]},
-  {path:'payment', component: PaymentPageComponent, canActivate:[loginUserGuard]}
+  {path:'payment', component: PaymentPageComponent, canActivate:[loginUserGuard]},
+  {path:'api/orders/track/:orderId', component: OrderTrackPageComponent, canActivate:[loginUserGuard]}
 ];
 
 @NgModule({

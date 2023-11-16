@@ -20,5 +20,12 @@ export class OrderService {
     return this.http.get<Order>(`${environment.urlBackend}`+'api/orders/newOrderForCurrentUser/'+userId);
    }
 
+   pay(order:Order):Observable<string>{
+    return this.http.post<string>(`${environment.urlBackend}`+'api/orders/pay',order);
+  }
+
+  trackOrderById(order_Id:number): Observable<Order>{
+    return this.http.get<Order>(`${environment.urlBackend}`+'api/orders/track/' + order_Id);
+  }
 
 }
